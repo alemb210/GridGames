@@ -1,6 +1,7 @@
 .container {
   display: grid;
-  /* Style rows and columns */
+  grid-template-rows: (1fr 1fr 7fr 1fr);
+  grid-template-columns: (200px auto);
 }
 
 #title {
