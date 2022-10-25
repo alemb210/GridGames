@@ -2,7 +2,7 @@
 .container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(1fr 1fr 7fr 1fr);
+  grid-template-rows: (1fr 1fr 7fr 1fr);
   height: 800px;
 }
 
@@ -42,29 +42,38 @@
 
 .container {
   display: grid;
-  grid-template-rows: (1fr 1fr 7fr 1fr);
-  grid-template-columns: (200px auto);
+  grid-template-columns: 200px auto;
+  grid-template-rows: 1fr 1fr 7fr 1fr;
+  height: 800px;
 }
 
 #navbar {
-  grid-column-start: span 2;
-
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
 }
 
 #sidebar {
   writing-mode: vertical-rl;
-
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 7;
 }
 
 #title {
-
+  grid-column-start: 2;
+  grid-row-start: 2;
 }
 
 
 #content {
-
+  grid-row-start: 3;
+  grid-row-end: 7;
+  grid-column-start: 2;
 }
 
 #footer {
-
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 7;
 }

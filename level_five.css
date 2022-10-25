@@ -1,15 +1,33 @@
 .container {
   display: grid;
-  grid-template-rows: (1fr 1fr 7fr 1fr);
-  grid-template-columns: (200px auto);
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 }
 
 #title {
-  grid-column: /*this should span the entire page, look into using negative numbers in grid-column-end*/;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  /*this should span the entire page, look into using negative numbers in grid-column-end*/
 }
 
-.friend {
+.FriendsCousins {
+ grid-row: span 1;
+ grid-column: span 1; 
+}
 
+.AuntsUncles {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.Grandparents {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.Siblings {
+  grid-column: span 2;
+  grid-row: span 1;
 }
 
 /* Style other types of family members below*/
